@@ -1,4 +1,4 @@
-class MainHeading extends HTMLElement {
+class ProductOne extends HTMLElement {
     constructor() {
       super();
       this.shadow = this.attachShadow({ mode: "open" });
@@ -17,8 +17,6 @@ class MainHeading extends HTMLElement {
     }
 
     renderHTML() {
-      const text = this.getAttribute('text');
-      const thumbnail = this.getAttribute('thumbnail');
       const html = `
       <style>
         div {
@@ -30,19 +28,22 @@ class MainHeading extends HTMLElement {
         }
 
         div {
-          height: 100vh;
-          justify-content: center;
-          align-items: center;
+          width: 100%;
+          background-color: red;
+          height: 200px;
         }
+
+        span {
+          background-color: yellow;
+          
+        }
+
       </style>
-      <div>
-        <h1>${text}</h1>
-        <img src="${thumbnail}" />
-      </div>
+      <div><span>Hello</span></div>
       `
       this.shadow.innerHTML = html;
     }
   
   }
-  customElements.define("section-1", MainHeading);
+  customElements.define("product-item", ProductOne);
   
