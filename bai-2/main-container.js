@@ -16,7 +16,49 @@ class MainContainer extends HTMLElement {
       this.renderHTML();
     }
 
+    xyz = 'xyyz'
+
     renderHTML() {
+      const list = [1,2,3,4,5,6];
+      // const listHTML = [
+      //   '<span>1</span>',
+      //   '<span>2</span>',
+      //   '<span>3</span>',
+      //   '<span>4</span>',
+      //   '<span>5</span>',
+      //   '<span>6</span>',
+      // ];
+      // const joined = `
+      //   <span>1</span>
+      //   <span>2</span>
+      //   <span>3</span>
+      //   <span>4</span>
+      //   <span>5</span>
+      //   <span>6</span>
+      // `;
+
+      // const listHTML = list.map((item) => {
+      //   return `<span>${item}</span>`;
+      // })
+
+      const listHTML = list.map((item) => {
+        return `
+          <Product1
+            logo="${item.logo}"
+            content_logo="${item.content_logo}"
+            image="${item.image}"
+            time="${item.time}"
+            content="${item.content}"
+            link="${item.link}"
+            number_heart="${item.number_heart}"
+            number_comment="${item.number_comment}"
+            number_upload="${item.number_upload}"
+          ></Product1>
+        `
+      });
+      const joined = listHTML.join('\n');
+      console.log(joined);
+
       const html = `
       <style>
         div {

@@ -14,21 +14,28 @@
         padding: 0;
         margin: 0;
       }
-      product-item {
+      /* product-item {
         width: calc( 33% - 20px );
         margin: 10px;
-      }
+      } */
     </style>
   </head>
 
   <body>
     <main-container>
-      <product-item></product-item>
-      <product-item></product-item>
-      <product-item></product-item>
-      <product-item></product-item>
-      <product-item></product-item>
-      <product-item></product-item>
+      <!-- inner HTML -->
     </main-container>
+    <script>
+      const list = [
+        // {
+        //   ....
+        // }
+      ]
+      const joined = '...';
+      const mainContainer = document.querySelector('main-container');
+      if (mainContainer) {
+        mainContainer.innerHTML = joined;
+      }
+    </script>
   </body>
 </html>
