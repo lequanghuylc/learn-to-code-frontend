@@ -14,9 +14,8 @@ customElements.define("clone-me-short", class extends CoreElement {
 
   renderContainerCSS = () => {
     return `
-      width: 100p%;
       height: 100px;
-      background-color: #${Math.floor(Math.random()*16777215).toString(16)}; // random
+      background-color: pink;
     `;
   }
 
@@ -30,8 +29,16 @@ customElements.define("clone-me-short", class extends CoreElement {
     `;
   }
 
+  // CACH 2
   renderHTML = () => {
     this.style.cssText = this.renderContainerCSS();
+    if (this.state.width <= 480) {
+      this.style.width = '100%';
+    } else if (this.state.width <= 768) {
+      this.style.width = '75%';
+    } else {
+      this.style.width = '50%';
+    }
     const html = `
       ${this.renderStyle()}
       <slot></slot>
