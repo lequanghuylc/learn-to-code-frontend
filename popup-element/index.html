@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="CoreElement.js"></script>
+    <script src="popup-element.js"></script>
+    <style>
+        html, body { height: 100%; padding: 0; margin: 0 }
+    </style>
+</head>
+<body>
+
+    <popup-element></popup-element>
+    <button>Button 1</button>
+    <button>Button 2</button>
+    <button>Button 3</button>
+<script>
+    const popupElement = document.querySelector('popup-element');
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach((button, buttonIndex) => {
+        button.onclick = () => {
+            // alert(`Button ${buttonIndex + 1} clicked`);
+            popupElement.showPopup(`Đây là button: ${buttonIndex + 1}`);
+        }
+    });
+</script>
+<body>
+    
+</body>
+</body>
+</html>
